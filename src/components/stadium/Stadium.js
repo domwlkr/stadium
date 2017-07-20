@@ -4,27 +4,31 @@ import './Stadium.css';
 
 const directions = ['north', 'south', 'east', 'west'];
 
-const Stadium = ({ selectedStand }) => {
-    const submitStand = (e) => {
-        console.log(e);
-    };
-
+const Stadium = ({ submitStand }) => {
     const stands = directions.map(direction => (
-        <Stand key={direction} submitStand={submitStand} direction={direction} />
+        <Stand key={direction} direction={direction} />
     ));
 
     return (
         <div className="stadium">
-            <form>
+            <form
+              onSubmit={(event) => {
+                  event.preventDefault();
+                  submitStand();
+              }}
+            >
                 {stands}
-                <span className="selected-stand">{selectedStand}</span>
+
+                <button type="submit" className="select-stand">
+                    Select stand
+                </button>
             </form>
         </div>
     );
 };
 
 Stadium.propTypes = {
-    selectedStand: PropTypes.string.isRequired,
+    submitStand: PropTypes.func.isRequired,
 };
 
 export default Stadium;
