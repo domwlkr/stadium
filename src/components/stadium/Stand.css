@@ -1,0 +1,84 @@
+.stand.north {
+    width: calc(100% - 80px);
+    height: 40px;
+    position: absolute;
+    left: 50%;
+    top: 0;
+    transform: translateX(-50%);
+}
+
+.stand.north label {
+    background-color: red;
+}
+
+.stand.north input:checked + label {
+    background-color: firebrick;
+}
+
+.stand.east {
+    width: 40px;
+    height: calc(100% - 80px);
+    position: absolute;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.stand.east label {
+    background-color: yellow;
+}
+
+.stand.east input:checked + label {
+    background-color: gold;
+}
+
+.stand.south {
+    width: calc(100% - 80px);
+    height: 40px;
+    position: absolute;
+    left: 50%;
+    bottom: 0;
+    transform: translateX(-50%);
+}
+
+.stand.south label {
+    background-color: blue;
+}
+
+.stand.south input:checked + label {
+    background-color: navy;
+}
+
+.stand.west {
+    width: 40px;
+    height: calc(100% - 80px);
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.stand.west label {
+    background-color: green;
+}
+
+.stand.west input:checked + label {
+    background-color: darkgreen;
+}
+
+.stand input {
+    padding: 0;
+    margin: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.stand label {
+    padding: 0;
+    margin: 0;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    left: 0;
+    top: 0;
+}
