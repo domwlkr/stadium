@@ -7,14 +7,6 @@
     transform: translateX(-50%);
 }
 
-.stand.north label {
-    background-color: red;
-}
-
-.stand.north input:checked + label {
-    background-color: firebrick;
-}
-
 .stand.east {
     width: 40px;
     height: calc(100% - 80px);
@@ -22,14 +14,6 @@
     right: 0;
     top: 50%;
     transform: translateY(-50%);
-}
-
-.stand.east label {
-    background-color: yellow;
-}
-
-.stand.east input:checked + label {
-    background-color: gold;
 }
 
 .stand.south {
@@ -41,14 +25,6 @@
     transform: translateX(-50%);
 }
 
-.stand.south label {
-    background-color: blue;
-}
-
-.stand.south input:checked + label {
-    background-color: navy;
-}
-
 .stand.west {
     width: 40px;
     height: calc(100% - 80px);
@@ -56,14 +32,6 @@
     left: 0;
     top: 50%;
     transform: translateY(-50%);
-}
-
-.stand.west label {
-    background-color: green;
-}
-
-.stand.west input:checked + label {
-    background-color: darkgreen;
 }
 
 .stand input {
@@ -81,4 +49,34 @@
     position: absolute;
     left: 0;
     top: 0;
+    color: white;
+    text-align: center;
+    text-transform: uppercase;
+    font-size: 12px;
+}
+
+.stand label {
+    background-color: navy;
+}
+
+.stand input:checked + label {
+    background-color: darkslateblue;   
+}
+
+.stand span {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    transform-origin: 0 0;
+}
+
+.stand.west span {
+    transform: rotate(-90deg) translate(-50%, -50%);
+    display: block;
+}
+
+.stand.east span {
+    transform: rotate(90deg) translate(-50%, -50%);
+    display: block;
 }

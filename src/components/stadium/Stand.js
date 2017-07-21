@@ -4,7 +4,7 @@ import './Stand.css';
 const Stand = ({ direction }) => (
     <div className={`stand ${direction}`}>
         <input id={`${direction}-stand`} type="radio" name="stand" />
-        <label htmlFor={`${direction}-stand`}>{direction} Stand</label>
+        <label htmlFor={`${direction}-stand`}><span>{direction} Stand</span></label>
     </div>
 );
 
